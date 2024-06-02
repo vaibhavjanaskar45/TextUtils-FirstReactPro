@@ -38,7 +38,7 @@ if(mode === 'light'){
   document.body.style.backgroundColor='black';
   
   showAlert('Dark Mode enable','Success')
-  document.title ='TextUtils | Dark Mode : Home'
+  document.title ='TextUtils | Dark Mode'
   // setInterval(() => {
   //   document.title ='Welcome To'
   // }, 2000);
@@ -51,7 +51,7 @@ else{
   setModeText('Dark')
   document.body.style.backgroundColor='white';
   showAlert('Light Mode enable','Success')
-  document.title ='TextUtils | Light Mode : Home'
+  document.title ='TextUtils | Light Mode'
 
 }
 }
@@ -62,7 +62,7 @@ else{
     <AlertBox alertProp={alert} />
     <div className="container mxy-3">
     <Routes>
-          <Route exact path="/about" element={<About />}>
+          <Route exact path="/about" element={<About mode={mode}        />}>
           </Route>
           <Route exact path="/"  element={
             <TextForm title="Enter text to analyze below" textColor={modeText}  />
